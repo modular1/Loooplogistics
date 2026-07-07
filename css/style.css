@@ -155,37 +155,22 @@ h1, h2, h3, h4 { color: var(--navy); font-weight: 500; line-height: 1.2; }
 
 .logo {
   display: inline-flex;
+  flex-direction: column;
   align-items: center;
-  gap: 2px;
-  font-weight: 600;
-  font-size: 2rem;
-  color: var(--navy);
-  letter-spacing: 0.02em;
+  gap: 5px;
   text-decoration: none;
   line-height: 1;
 }
-.logo .word { display: flex; align-items: center; gap: 3px; }
-.logo .ring {
-  width: 0.92em;
-  height: 0.92em;
-  border-radius: 50%;
-  border: 0.17em solid var(--navy);
-  margin: 0 -0.13em;
-}
-.logo .ring.r2 { border-color: var(--teal-soft); }
-.logo .ring.r3 { border-color: var(--orange); }
+.logo svg { height: 38px; width: auto; }
 .logo .sub {
-  font-size: 0.34em;
+  font-size: 0.72rem;
   font-weight: 500;
-  letter-spacing: 0.42em;
-  color: var(--blue);
-  margin-left: 0.6em;
+  letter-spacing: 0.48em;
+  margin-right: -0.48em; /* compenseert letterspacing voor optische centrering */
+  color: #22334e;
   text-transform: uppercase;
 }
-.logo.logo-light, .logo.logo-light .sub { color: #fff; }
-.logo.logo-light .ring { border-color: #fff; }
-.logo.logo-light .ring.r2 { border-color: #7fd0d3; }
-.logo.logo-light .ring.r3 { border-color: var(--orange); }
+.logo.logo-light .sub { color: #cfe0ec; }
 
 /* ==========================================================================
    Fullscreen menu-overlay

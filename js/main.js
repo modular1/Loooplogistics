@@ -18,10 +18,31 @@
   /* Logo                                                                */
   /* ------------------------------------------------------------------ */
 
+  var logoUid = 0;
+
   function logoHtml(light) {
+    logoUid++;
+    var p = 'lgrad' + logoUid;
+    var letter = light ? '#ffffff' : '#22334e';
+    var defs = light
+      ? ''
+      : '<defs>' +
+        '<linearGradient id="' + p + 'a" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2c4a63"/><stop offset="1" stop-color="#3fa0a5"/></linearGradient>' +
+        '<linearGradient id="' + p + 'b" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3fa0a5"/><stop offset="1" stop-color="#d9905a"/></linearGradient>' +
+        '<linearGradient id="' + p + 'c" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e08a4f"/><stop offset="1" stop-color="#454b6e"/></linearGradient>' +
+        '</defs>';
+    var s1 = light ? '#ffffff' : 'url(#' + p + 'a)';
+    var s2 = light ? '#ffffff' : 'url(#' + p + 'b)';
+    var s3 = light ? '#ffffff' : 'url(#' + p + 'c)';
     return (
       '<a class="logo ' + (light ? 'logo-light' : '') + '" href="index.html" aria-label="Looop Logistics home">' +
-      '<span class="word">L<span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span>P</span>' +
+      '<svg viewBox="0 0 440 150" role="img">' + defs +
+      '<path d="M26 26 V124 H86" fill="none" stroke="' + letter + '" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>' +
+      '<circle cx="160" cy="75" r="44" fill="none" stroke="' + s1 + '" stroke-width="21"/>' +
+      '<circle cx="288" cy="75" r="44" fill="none" stroke="' + s3 + '" stroke-width="21"/>' +
+      '<circle cx="224" cy="75" r="44" fill="none" stroke="' + s2 + '" stroke-width="21"/>' +
+      '<path d="M362 124 V26 h28 a28 28 0 0 1 0 56 h-28" fill="none" stroke="' + letter + '" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>' +
+      '</svg>' +
       '<span class="sub">Logistics</span>' +
       '</a>'
     );
