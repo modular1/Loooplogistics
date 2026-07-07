@@ -20,8 +20,9 @@ afgeronde typografie (Fredoka).
 - `css/style.css` — alle styling en huisstijl-variabelen (kleuren in `:root`)
 - `js/main.js` — gedeelde header, fullscreen-menu, footer, contact-knop,
   hero-carrousel en tabs
-- Alle illustraties zijn inline SVG (geen externe afbeeldingen nodig);
-  vervang deze desgewenst door echte fotografie
+- `img/` — officiële Looop-logo's (kleur, wit en wit-met-gradient)
+- Overige illustraties zijn inline SVG-placeholders; vervang deze
+  desgewenst door echte fotografie
 
 ## Lokaal bekijken
 

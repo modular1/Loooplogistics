@@ -161,7 +161,7 @@ h1, h2, h3, h4 { color: var(--navy); font-weight: 500; line-height: 1.2; }
   text-decoration: none;
   line-height: 1;
 }
-.logo svg { height: 38px; width: auto; }
+.logo img { height: 34px; width: auto; }
 .logo .sub {
   font-size: 0.72rem;
   font-weight: 500;
